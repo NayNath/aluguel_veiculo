@@ -1,5 +1,5 @@
 <?PHP
-class Veiculo{
+abstract class Veiculo{
     private $marca;
     private $modelo;
     private $precoDiaria;
@@ -15,14 +15,15 @@ class Veiculo{
         return $this->marca.
                 $this->modelo;
     }
-    public function alugar(){
-        
+    public function setAlugar($disponivel){
+        return $this->disponivel = false;
     }
-    public function devolver(){
-
+    public function setDevolver($disponivel){
+        return $this->disponivel = true;
     }
-    abstract public function calcularCusto($dias, $precoDiaria);
-
-/*alugar() e devolver() para alterar o status do veículo;*/
+    public function getDisponivel($disponivel){
+        return $this->disponivel == true ? "Disponival":"Indisponival";
+    }
+    abstract public function getCalcularCusto();
 }
 ?>

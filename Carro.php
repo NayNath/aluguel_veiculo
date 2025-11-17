@@ -7,30 +7,17 @@ class Carro extends Veiculo{
         parent::__construct($marca, $modelo, $precoDiaria, $disponivel);
         $this->portas = $portas;
     }
-    public function setAlugar ($disponivel){
-        return $disponivel - 1;
-    }
-    public function setDevolver ($disponivel){
-        return $disponivel + 1;
-    }
-    public function getDisponivel($disponivel){
-        if ($disponivel==1){
-            return "Disponivel";
-        }else{
-            return "Indisponivel";
-        }
-    }
     public function calcularCusto($dias, $precoDiaria){
         if($dias>=1){
             $valor = ($dias*$precoDiaria)*0.1;  
         }
     }
-    public function infosVeiculos($marca, $modelo, $precoDiaria, $disponivel, $portas){
-        return "<p>Marca: {$marca} </p>".
-                "<p>Modelo: {$modelo} </p>".
-                "<p>Preço Diaria: {$precoDiaria} </p>".
-                "<p>Disponibilidade: {$disponivel} </p>".
-                "<p>Preço Diaria: {$portas} </p>";
+    public function infosVeiculos(){
+        return "<p>Marca: {$this->marca} </p>".
+                "<p>Modelo: {$this->modelo} </p>".
+                "<p>Preço Diaria: {$this->precoDiaria} </p>".
+                "<p>Disponibilidade: {$this->disponivel} </p>".
+                "<p>Preço Diaria: {$this->portas} </p>";
     }
 }
 ?>

@@ -20,17 +20,11 @@ class Moto extends Veiculo{
             return "Indisponivel";
         }
     }
-    public function calcularCusto($dias, $precoDiaria){
+    /*public function calcularCusto($dias, $precoDiaria){
         if($dias>=1){
             $valor = ($dias*$precoDiaria)*0.05;
         }
-    }
-    public function infosVeiculos($marca, $modelo, $precoDiaria, $disponivel, $portas){
-        return "<p>Marca: {$marca} </p>".
-                "<p>Modelo: {$modelo} </p>".
-                "<p>Preço Diaria: {$precoDiaria} </p>".
-                "<p>Disponibilidade: {$disponivel} </p>".
-                "<p>Preço Diaria: {$portas} </p>";
-    }
+    }*/
+    
 }
 ?>

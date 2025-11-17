@@ -38,10 +38,6 @@ $veiculo = [
                 <tr>
                     <td><?= $v->infosVeiculos(); ?></td>
                     <!--chama o getTipo da classe 'Aluno' -->
-                    <td><?= $v->getNome(); ?></td>
-                    <!--chama o getNome da classe 'Pessoa' -->
-                    <td><?= $v->getIdade(); ?></td>
-                    <!--chama o getIdade da classe 'Pessoa' -->
                     <td><?= $v->getDescricao(); ?></td>
                     <!--chama o getDescricao da classe 'Pessoa' -->
                 </tr>
