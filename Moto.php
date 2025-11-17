@@ -7,24 +7,11 @@ class Moto extends Veiculo{
         parent::__construct($marca, $modelo, $precoDiaria, $disponivel);
         $this->cilindradas = $cilindradas;
     }
-    public function setAlugar ($disponivel){
-        return $disponivel - 1;
-    }
-    public function setDevolver ($disponivel){
-        return $disponivel + 1;
-    }
-    public function getDisponivel($disponivel){
-        if ($disponivel==1){
-            return "Disponivel";
-        }else{
-            return "Indisponivel";
-        }
-    }
-    /*public function calcularCusto($dias, $precoDiaria){
+    public function calcularCusto($dias){
         if($dias>=1){
-            $valor = ($dias*$precoDiaria)*0.05;
+            $valor = ($dias*$this->precoDiaria)*0.05;
         }
-    }*/
+    }
     
 }
 ?>

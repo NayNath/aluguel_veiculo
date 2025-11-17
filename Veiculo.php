@@ -1,9 +1,9 @@
 <?PHP
 abstract class Veiculo{
-    private $marca;
-    private $modelo;
-    private $precoDiaria;
-    private bool $disponivel;
+    protected $marca;
+    protected $modelo;
+    protected $precoDiaria;
+    protected bool $disponivel;
 
     public function __construct($marca,$modelo,$precoDiaria,$disponivel){
         $this->marca = $marca;
@@ -15,15 +15,15 @@ abstract class Veiculo{
         return $this->marca.
                 $this->modelo;
     }
-    public function setAlugar($disponivel){
+    public function setAlugar(){
         return $this->disponivel = false;
     }
-    public function setDevolver($disponivel){
+    public function setDevolver(){
         return $this->disponivel = true;
     }
-    public function getDisponivel($disponivel){
-        return $this->disponivel == true ? "Disponival":"Indisponival";
+    public function getDisponivel(){
+        return $this->disponivel ? "Disponíval":"Indisponíval";
     }
-    abstract public function getCalcularCusto();
+    abstract public function calcularCusto($dias);
 }
 ?>
